@@ -10,10 +10,10 @@ class Game
 end
 
 class Board
-  attr_reader :board
+  attr_reader :columns
   
-  def initialize
-    @board = Array.new(42)
+  def board_columns
+    @columns = Array.new(7)
   end
 
 end
@@ -24,4 +24,4 @@ class Player
     @name = name
   end 
 
-end 
+end

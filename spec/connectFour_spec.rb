@@ -13,10 +13,10 @@ end
 
 describe Board do
   describe "#new_board" do
-    it "creates an array with 42 elements" do
+    it "creates array for 7 columns" do
       newBoard = Board.new
-      expect(newBoard.board.count).to eql(42)
+      newBoard.board_columns
+      expect(newBoard.columns.length).to eql(7)
     end
   end
-
 end
