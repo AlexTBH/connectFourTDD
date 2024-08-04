@@ -15,13 +15,7 @@ describe Game do
     end
   end
 
-  describe "mark_symbol" do
-    it "marks an index on the columns array with a symbol" do
-      newGame = Game.new
-      newGame.mark_symbol
-      expect(newGame.columns[0]).to eql("X")
-    end
-  end
+
 
 end
 
@@ -32,6 +26,14 @@ describe Board do
       newBoard = Board.new
       
       expect(newBoard.columns.length).to eql(42)
+    end
+  end
+
+  describe "mark_symbol" do
+    it "marks an index on the columns array with a symbol" do
+      newGame = Board.new
+      newGame.mark_symbol
+      expect(newGame.columns[0]).to eql("X")
     end
   end
 

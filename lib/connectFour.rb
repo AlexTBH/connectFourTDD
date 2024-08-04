@@ -1,27 +1,25 @@
 class Game 
   
-  attr_reader :player_one, :player_two, :columns
+  attr_reader :player_one, :player_two, :board
+  
   
   def initialize(player_one_name= "player 1", player_two_name = "player 2")
     @player_one = Player.new(player_one_name, "X")
     @player_two = Player.new(player_two_name, "O")
+    @board = Board.new
   end
 
-  def mark_symbol
-    
+  def player_turn
+    @board.mark_symbol
   end
 
 end
 
 class Board
-  attr_reader :columns
+  attr_accessor :columns
   
   def initialize
-    new_board
-  end
-
-  def new_board
-    @columns = Array.new(42, 0)
+    @columns = Array.new(42, "0")
   end
 
   def display_board
@@ -36,6 +34,11 @@ class Board
     end
   end
 
+  def mark_symbol
+    @columns[0] = "X"
+  end
+
+
 end
 
 class Player
@@ -47,5 +50,10 @@ class Player
   end
     
 end
+
+x = Game.new
+x.player_turn
+x.board.display_board
+
 
 
