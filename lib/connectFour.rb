@@ -9,9 +9,14 @@ class Game
     @board = Board.new
   end
 
+
+  ## Work on this next
   def player_turn
+    
     @board.mark_symbol
   end
+
+  ## Work on this next
 
 end
 
@@ -34,10 +39,12 @@ class Board
     end
   end
 
-  def mark_symbol
+  ## Work on this next
+  def mark_symbol(@player_symbol)
     @columns[0] = "X"
   end
 
+  ## Work on this next
 
 end
 
